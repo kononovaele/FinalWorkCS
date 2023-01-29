@@ -9,13 +9,13 @@
 
 string[] GetInputString()
 {
-    Console.Write("\nInput two digits (M N) of integer, please: ");
+    Console.Write("\nInput string, where delimiter is comma, please: ");
+    Console.Write("\nExample: 123, fgf, fdfdfds, rrrrr, 333, (^d");
 
     string? strInput = Console.ReadLine();
     if( String.IsNullOrEmpty(strInput) == true)
         strInput = "0";
 
-    //string[] array = strInput.Split().Select().ToArray();
     String[] spearator = { "," };
   
     String[] strlist = strInput.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
@@ -40,6 +40,30 @@ string[] TrimStringArray(string[] strArray)
     return strArray;
 }
 
+string[] GetEmptyStringArray(string[] strArray)
+{
+    int arrayLen = 0;
+    foreach(string str in strArray)
+    {
+        if(str.Length <= 3)
+            arrayLen = arrayLen + 1;
+    }
+    return new string[arrayLen];
+}
+
+string[] GetStringArrayThreeLE(string[] strArray, string[] strArrayThreeLE)
+{
+    int i = 0;
+    foreach(string str in strArray)
+    {
+        if(str.Length <= 3) {
+            strArrayThreeLE[i] = str;
+            i = i + 1;
+        }
+    }
+    return strArrayThreeLE;
+}
+
 void main()
 {
     Console.WriteLine(" ------- Final work -------");
@@ -50,29 +74,11 @@ void main()
     strArray = TrimStringArray(strArray);
     PrintStringArray(strArray);
 
-    // Если были введены целые числа с разделителем запятая "," то заменяем запятую на пробел " "
-    //strDigits = GetNormilizeStrOfIntegers(strDigits);
+    string[] strArrayThreeLE = GetEmptyStringArray(strArray);
 
-    // Получим массив строк, где строка - целое число в виде строки
-    //string[] wordsOfNumbers = GetStrArrayOfNumvers(strDigits);
+    strArrayThreeLE = GetStringArrayThreeLE(strArray, strArrayThreeLE);
+    PrintStringArray(strArrayThreeLE);
 
-    // Конвертируем массив строк в массив целых числех
-    //int[] arrayOfDigits = GetConvertStrArrayToArrayInt(wordsOfNumbers);
-
-    //int row = arrayOfDigits[0];
-    //int col = arrayOfDigits[1];
-
-    // Создать квадратную матрицу вещественных чисел и заполнить ее
-    //int[,] matrix = GetMatrixInt(row, col);
-
-    // Печатаем матрицу
-    //PrintMatrix(row, col, matrix);
-
-    // Получим массив среднеарифмитических чисел. Размер массива - col
-    // double[] arrayОfАverages = GetArrayОfАverages(row, col, matrix);
-
-    // Печатаем результат (красиво), количество введенных чисел больше нуля
-    //PrintRezult(arrayОfАverages, col);
 }
 
 main();
