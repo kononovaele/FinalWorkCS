@@ -9,8 +9,9 @@
 
 string[] GetInputString()
 {
-    Console.Write("\nInput string, where delimiter is comma, please: ");
-    Console.Write("\nExample: 123, fgf, fdfdfds, rrrrr, 333, (^d");
+    Console.Write("\nInput string, where delimiter is comma");
+    Console.Write("\nExample: 123, fdfdfds, rrrrr, 333, (^d, 777: ");
+    Console.Write("\nInput, please: ");
 
     string? strInput = Console.ReadLine();
     if( String.IsNullOrEmpty(strInput) == true)
@@ -68,14 +69,18 @@ void main()
 {
     Console.WriteLine(" ------- Final work -------");
 
-    // Получить строку ввода целых чисел. Это строка вида: "N M P" задает размер матрицы и число, которое мы ищем в матрице
-    // Пример : " 5 4 17", матрица размером 5 на 4 и мы ищем число 17 в матрице
+    // Получить строку символов (любых), раздедитель символов - запятая ","
+    // Пример : Hello, 2, world, :-)
     string[] strArray = GetInputString();
+
+    // Удаляем пробелы в веденных строках
     strArray = TrimStringArray(strArray);
     PrintStringArray(strArray);
 
+    // Получим массив строк (пустой), длинной в колличестве строк, где число символов в строке <= 3
     string[] strArrayThreeLE = GetEmptyStringArray(strArray);
 
+    // Заполним массив строк, строками из другого массива строк, где число символов в строке <= 3
     strArrayThreeLE = GetStringArrayThreeLE(strArray, strArrayThreeLE);
     PrintStringArray(strArrayThreeLE);
 
