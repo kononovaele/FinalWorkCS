@@ -18,7 +18,6 @@ string[] GetInputString()
     //string[] array = strInput.Split().Select().ToArray();
     String[] spearator = { "," };
   
-        // using the method
     String[] strlist = strInput.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
 
     return strlist;
