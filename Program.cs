@@ -7,6 +7,8 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
+// Вводим строку символов
+// Возвращает массив строк, без разделителя
 string[] GetInputString()
 {
     Console.Write("\nInput string, where delimiter is comma");
@@ -15,7 +17,7 @@ string[] GetInputString()
 
     string? strInput = Console.ReadLine();
     if( String.IsNullOrEmpty(strInput) == true)
-        strInput = "0";
+        strInput = "";
 
     String[] spearator = { "," };
   
@@ -24,14 +26,23 @@ string[] GetInputString()
     return strlist;
 }
 
+// Печатаем массив строк
 void PrintStringArray(string[] strArray)
 {
-    foreach(string str in strArray)
+
+    Console.Write("[");
+    for(int i = 0; i < strArray.Length; ++i)
     {
-       Console.WriteLine($"\"{str}\" "); 
+        if( i == strArray.Length - 1)
+            Console.Write($"\"{strArray[i]}\"");
+        else
+            Console.Write($"\"{strArray[i]}\", ");
     }
+        Console.Write("]");
 }
 
+// Удаяем пробелы из стрлк массива
+// Возвращает массив строк без пробелов
 string[] TrimStringArray(string[] strArray)
 {
     for(int i = 0; i < strArray.Length; ++i)
@@ -41,6 +52,8 @@ string[] TrimStringArray(string[] strArray)
     return strArray;
 }
 
+// Создаем новый массив строк (пустой), размером с количества строк из входного массива, где строка входящего массива <=3
+// Возвращает новый пустой массив строк
 string[] GetEmptyStringArray(string[] strArray)
 {
     int arrayLen = 0;
@@ -52,6 +65,8 @@ string[] GetEmptyStringArray(string[] strArray)
     return new string[arrayLen];
 }
 
+// Заполняем массив строками из другого массива строк, где строка <= 3
+// Возвращает заполненный массив строк
 string[] GetStringArrayThreeLE(string[] strArray, string[] strArrayThreeLE)
 {
     int i = 0;
@@ -82,6 +97,7 @@ void main()
 
     // Заполним массив строк, строками из другого массива строк, где число символов в строке <= 3
     strArrayThreeLE = GetStringArrayThreeLE(strArray, strArrayThreeLE);
+    Console.Write(" => ");
     PrintStringArray(strArrayThreeLE);
 
 }
