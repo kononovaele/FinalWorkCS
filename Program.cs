@@ -38,10 +38,10 @@ void PrintStringArray(string[] strArray)
         else
             Console.Write($"\"{strArray[i]}\", ");
     }
-        Console.Write("]");
+    Console.Write("]");
 }
 
-// Удаяем пробелы из стрлк массива
+// Удаяем пробелы из строк массива
 // Возвращает массив строк без пробелов
 string[] TrimStringArray(string[] strArray)
 {
