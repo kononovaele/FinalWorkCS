@@ -1,0 +1,15 @@
+E:\Kononova\CS\FinalWorkCS\bin\Debug\net7.0\FinalWorkCS.exe
+E:\Kononova\CS\FinalWorkCS\bin\Debug\net7.0\FinalWorkCS.deps.json
+E:\Kononova\CS\FinalWorkCS\bin\Debug\net7.0\FinalWorkCS.runtimeconfig.json
+E:\Kononova\CS\FinalWorkCS\bin\Debug\net7.0\FinalWorkCS.dll
+E:\Kononova\CS\FinalWorkCS\bin\Debug\net7.0\FinalWorkCS.pdb
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\FinalWorkCS.csproj.AssemblyReference.cache
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\FinalWorkCS.GeneratedMSBuildEditorConfig.editorconfig
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\FinalWorkCS.AssemblyInfoInputs.cache
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\FinalWorkCS.AssemblyInfo.cs
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\FinalWorkCS.csproj.CoreCompileInputs.cache
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\FinalWorkCS.dll
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\refint\FinalWorkCS.dll
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\FinalWorkCS.pdb
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\FinalWorkCS.genruntimeconfig.cache
+E:\Kononova\CS\FinalWorkCS\obj\Debug\net7.0\ref\FinalWorkCS.dll
