@@ -26,11 +26,19 @@ string[] GetInputString()
 
 void PrintStringArray(string[] strArray)
 {
-
     foreach(string str in strArray)
     {
-       Console.WriteLine($"{str} "); 
+       Console.WriteLine($"\"{str}\" "); 
     }
+}
+
+string[] TrimStringArray(string[] strArray)
+{
+    for(int i = 0; i < strArray.Length; ++i)
+    {
+        strArray[i] = strArray[i].Trim();
+    }
+    return strArray;
 }
 
 void main()
@@ -40,6 +48,7 @@ void main()
     // Получить строку ввода целых чисел. Это строка вида: "N M P" задает размер матрицы и число, которое мы ищем в матрице
     // Пример : " 5 4 17", матрица размером 5 на 4 и мы ищем число 17 в матрице
     string[] strArray = GetInputString();
+    strArray = TrimStringArray(strArray);
     PrintStringArray(strArray);
 
     // Если были введены целые числа с разделителем запятая "," то заменяем запятую на пробел " "
